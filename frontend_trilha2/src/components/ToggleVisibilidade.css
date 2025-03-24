@@ -1,0 +1,50 @@
+.toggle-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.toggle-container button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-container button:hover {
+  background-color: #2980b9;
+}
+
+.texto {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  height: 0;
+  margin: 0;
+}
+
+.texto.visivel {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  margin: initial;
+  animation: fadeIn 0.5s ease;
+  color: chartreuse;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
